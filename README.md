@@ -51,3 +51,19 @@ proving the fleet works with one real job.
 
 Issues belong on the private `FiresandRunner` repository, where the source
 lives. This repository holds no code to fix.
+
+## Licence
+
+Apache-2.0 — see `LICENSE`, attached to every release. Copyright 2026
+Firesand LTD.
+
+Provided **AS IS**, without warranty or support of any kind, and with no
+response-time commitment. It runs as root and is handed a GitHub App private
+key: read it before you run it.
+
+The container image it installs (`ghcr.io/firesand-ltd/runner`) redistributes
+third-party components under their own licences — Terraform is **BUSL-1.1**,
+not an OSI-approved licence. See `NOTICE`, also attached to every release,
+before using this fleet in anything HashiCorp would call a competing offering.
+
+Security reports: see `SECURITY.md`.
