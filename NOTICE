@@ -1,0 +1,43 @@
+Firesand self-hosted runner fleet
+Copyright 2026 Firesand LTD
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License in the LICENSE file at the root of this repository, or at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+--- Third-party components -------------------------------------------------
+
+The licence above covers this repository's own source only. The container
+image published at ghcr.io/firesand-ltd/runner REDISTRIBUTES the components
+below, each under its own licence; the installer additionally installs Docker
+Engine on the host from Docker's own apt repository.
+
+  Component                     Licence      Verified from
+  ---------                     -------      -------------
+  GitHub Actions Runner         MIT          github.com/actions/runner
+  Docker Engine (moby)          Apache-2.0   github.com/moby/moby
+  Docker Compose plugin         Apache-2.0   github.com/docker/compose
+  Microsoft .NET runtime/SDK    MIT          github.com/dotnet/runtime
+  AWS CLI v2                    Apache-2.0   github.com/aws/aws-cli
+  HashiCorp Terraform >= 1.6    BUSL-1.1     github.com/hashicorp/terraform
+
+Terraform is the one that needs reading rather than skimming. Since 1.6 it is
+BUSL-1.1, not an OSI-approved licence:
+
+  Licensor:             International Business Machines Corporation (IBM)
+  Additional Use Grant: production use is permitted EXCEPT in a competing
+                        offering - see the licence for the exact wording
+  Change Date:          four years from publication
+  Change License:       MPL 2.0
+
+Running Terraform inside your own CI jobs is ordinary production use and is
+covered by the Additional Use Grant. Offering this fleet to third parties as a
+hosted service is the case to check against the licence text first.
+
+Nothing here constitutes legal advice.
